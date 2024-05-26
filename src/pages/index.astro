@@ -1,0 +1,9 @@
+---
+export const prerender = false
+
+const preferredLanguage = Astro.preferredLocale
+if (!preferredLanguage) {
+  return Astro.redirect(Astro.preferredLocale)
+}
+return Astro.redirect(preferredLanguage)
+---
