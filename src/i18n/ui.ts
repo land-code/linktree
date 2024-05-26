@@ -1,11 +1,11 @@
 export const languages = {
   en: "English",
   es: "Español",
-};
+} as const
 
-export const defaultLang = "en";
+export const defaultLang = "en" as const;
 
-export const ui = {
+export const ui: Record<keyof typeof languages, Record<string, string>> = {
   en: {
     "components.social.presentation":
       "I am a front-end developer and I dedicate all my days to learn and spread what I learn.",
